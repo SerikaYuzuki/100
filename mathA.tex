@@ -1,0 +1,472 @@
+\documentclass[a4paper,fleqn,dvipdfmx]{jsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{otf}
+\setlength{\mathindent}{2zw}
+\usepackage{empheq}
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{41\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.5in}
+\setlength{\headsep}{0.3in}
+\setlength{\topmargin}{0.3in}
+\setcounter{page}{1}
+\usepackage{color}
+\usepackage{ascmac}
+\usepackage{amssymb, amsmath}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{数学100問} 
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{-\thepage-}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+
+
+\begin{itembox}[l]{整数}
+
+\begin{itemize}
+    \item [1] 
+    次の式を満たす正整数の組$(x,y,z)$は存在しないことを示せ。
+    $$x^3-y^3=6xy^2z^3$$
+    \item [2] \#\#
+    $n$を2以上の整数とする。$2^n-1$を割り切る$n$は存在するか。存在するなら一つ例を提示し、存在しないなら証明せよ。
+\end{itemize}
+
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+\begin{itemize}
+    \item [1] 
+    $xy$を割り切る数を$d$とおく。$d$が$1$のみの場合、$x=y$となるのだが、これは明らかに与えられた式の解として不適。次に、$d\neq 1$の場合、両辺を$d^3$で割り切ることができて、$d=1$まで繰り返すことができる。これは前に述べたように不可能なので、証明は完了する。
+    
+    \item [2]
+    $p_1$を$n$の素因数の一つとして、$q$を$p_1$が$2^q-1$を割り切るような最小な数とする。フェルマーの小定理によって、$p_1$は$2^{p_1-1}-1$を割り切るので、$q\leq p_1-1$となる。次に、$n$を$q$で割ったあまりを$r$とすると、
+    $$2^n-1\equiv2^r-1(mod\ p_1)$$
+    となる。そうすると、上の作業が、$p_2$を$r$の素因数の一つとして、というふうに繰り返すことができて、考えている素因数列$p1>p_2>p_3>...$と繰り返されていくのだが、これはいずれ$1$にまでたどり着くことになり、それが不適切なのは問題の条件により明らかとなる。
+    
+\end{itemize}
+
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+俗にいう、無限降下法の問題です。倍数などの問題の解決の際に大いに役に立ちます！　高校の参考書でまとまった勉強をする機会が少ない割には、入試ではかなりの頻度で問われることになると思います！　あと数回、整数範囲が続きますが、どうか問題の難しさにめげずに頑張ってください！　また、整数という範囲の作問の都合上、どうしても難しい問題が出来上がってしまうことがありますので、その際には今日のように注意書きを載せて出題していきます！
+
+
+\begin{flushleft}
+【類題】
+\end{flushleft}
+
+\begin{itembox}[l]{整数}
+
+\begin{itemize}
+    \item [1] 
+    次の式を満たす正整数の組$(x,y)$は存在しないことを示せ。
+    $$x^2+10y^2=3z^2$$
+    \item [2] \#
+    次の式を満たす正整数の組$(x,y,z)$は存在しないことを示せ。
+    $$z^4=x^4+y^4$$
+\end{itemize}
+
+\end{itembox}
+解答が必要の場合は、受験生収容所をお尋ねください。
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{整数}
+
+\begin{itemize}
+    \item [1] 
+    正整数$a,b$について、$(2021a+b)(a+2021b)$が正整数$n$を用いて$2^n$の形で表すことはできないことを示せ。
+    \item [2] \#\# 正整数$a,b,n$について次の式を示せ。
+    $$gcd(n^a-1,n^b-1)=n^{gcd(a,b)}-1$$
+\end{itemize}
+
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+\begin{itemize}
+    \item [1] 
+    $a<b$とおき、$a,b$の共通因数を括り出して考えれば、$a,b$が互いに素とおくこともでき、\\$2021a+b=2^k,a+2021b=2^l,(k<l)$とおく。両式を足し合わせたり引き合わせたりすることによって、次の式が得られる。$505(b-a)=2^{k-2}(2^{l-k}-1),1011(b+a)=2^{k-1}(2^{l-k}+1)$ということは、$b-a=\alpha 2^{k-2},b+a=\beta2^{k-2}$などとおいてやれば、$a,b$共に$2^{k-3}$の倍数でなければならないという結論に辿り着く。$k=3$にはなり得ないので、互いに素である前提と矛盾することとなる。
+    
+    \item [2]
+    まず、因数分解できるので、$n^{gcd(a,b)}-1$は$n^a-1,n^b-1$を割り切り、$n^{gcd(a,b)}-1|gcd(n^a-1,n^b-1)$とわかる。次に、$ax-by=gcd(a,b)$となる$(x,y)$を用いれば、次の式ができる。
+    $$n^{by}\{n^{gcd(a,b)}-1\}=(n^{ax}-1)-(n^{by}-1)$$
+    $n^{by}$は$n^b-1$で割り切れないので、$gcd(n^a-1,n^b-1)|n^{gcd(a,b)}-1$とわかる。\\
+    以上により、$gcd(n^a-1,n^b-1)=n^{gcd(a,b)}-1$と示される。
+\end{itemize}
+
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+公約数関連の問題と、整式に拡大した互除法の問題です。こういった問題は、入試でも頻出ですので十分練習して損はないです！　類題もつけておきます！
+しかし最近めっきり寒くなってきましたね！　体は一番の資本なので、暖かくして寝てください！
+あまり回答が来ないの寂しいので、よろしければみなさんもっと積極的に提出いただけたら嬉しいです！
+
+
+\begin{flushleft}
+【類題】
+\end{flushleft}
+
+\begin{itembox}[l]{整数}
+
+\begin{itemize}
+    \item [1] 
+    $a,b$が正整数の時、次の式を示せ。
+    $$gcd(2^a+1,2^b+1)|2^{gcd(a,b)}+1$$
+    \item [2] \#
+    値が全て正整数の数列$\{a_n\}$について、任意の$(i,j)$に対して$gcd(a_i,a_j)=gcd(i,j)$が成立するという。この数列の一般項は$a_n=n$となることをしめせ。
+\end{itemize}
+
+\end{itembox}
+解答が必要の場合は、受験生収容所をお尋ねください。
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{整数}
+
+\begin{itemize}
+    \item [1] 
+    正整数$a,b$について、$ax+by=gcd(a,b)$となる整数$x,y$が存在することを示し、次に、任意の整数$x,y$に対して$gcd(a,b)$は$ax+by$を割り切ることを示せ。
+    \item [2] 任意の隣接するフィボナッチ数列は互いに素であることを示せ。
+    \item [3] 整数$a,b,c,d$に対して$\frac{a+b}{c+d}$が既約である十分条件は$ad-bc=1$であることをしめせ。
+\end{itemize}
+
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+\begin{itemize}
+    \item [1] 
+    まず、$ax+by=gcd(a,b)$を満たす$x,y$の存在を示す。ユークリッド互助法の回数$i$回で$a,b$の最大公約数が求められるという命題を$P(i)$とする。$P(1)$は、簡単に真だと示される。次に、帰納的に$P(i)$が真ならば$P(i+1)$が真であることを示せば良いが、これについても簡単な式変形で示すことができる。
+    
+    \item [2]
+    $gcd(F_n,F_{n-1})=gcd(F_{n-1}+F{n_2},F_{n-1})=gcd(F_{n-1},F_{n-2})=...=gcd(F_2,F_1)=1$
+    
+    \item [3]
+    $d(a+b)-b(c+d)=ad-bc=1$で、1の結果と合わせれば示される。
+    
+\end{itemize}
+
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+ユークリッド互助法についての基本的な問題です。参考書ではあまり深く扱われないのですが、超絶頻出単元ですので、是非とも習得していきましょう！
+
+
+\begin{flushleft}
+【類題】
+\end{flushleft}
+
+\begin{itembox}[l]{整数}
+
+\begin{itemize}
+    \item [1] 
+    整数$n$に対して$\frac{n^3-3n^2+4}{2n-1}$が整数である$n$を列挙せよ。
+    \item [2] 
+    値が全て正整数の数列$\{a_n\}$について、$k_1a_1+k_2a_2+...+k_na_n=gcd(a_1,a_2,...,a_n)$となる整数列$\{k_n\}$の存在を示せ。
+\end{itemize}
+
+\end{itembox}
+解答が必要の場合は、受験生収容所をお尋ねください。
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{整数}
+
+    有理数$r$に対して$\sum_{k=1}^n \frac{1}{x_k}=r$となる正整数列$\{x_k\}$の種類は有限個であることを示せ。
+
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+    題の命題を$P(n)$とおく。この時、$P(1)$が真であることは自明であるので、帰納的に$P(i)$が真ならば$P(i+1)$が真であることを示せば良い。$\sum_{k=1}^{i+1} \frac{1}{x_k}=r$とおいて、正整数列$\{x_k\}$の最小項を$x_{i+1}$とする。この時、$r\leq \frac{i+1}{x_{i+1}}$となる。ここで、$x_{i+1}\leq \frac{m+1}{r}$を満たす$x_{i+1}$は有限個しか存在せず、$P(i)$が真なので、$\sum_{k=1}^{i} \frac{1}{x_k}=r−1/x_{i+1}$となる$\{x_k\}$の種類も有限しかないので、以上によりば$P(i+1)$が真であることが示される。
+
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+東京工業大学の過去問をそのまま引用させていただきました。あまりこう言ったことは避けてやらないようにしようとおもっているのですが、どうしても入試問題に傑作問題がある場合は、遠慮なく使わせていただくことにしました。\\
+次回は素数を予定しています。その後は整数範囲の総合問題を出題する予定です。\\
+選挙権のある皆さんは、ぜひ選挙に行ってくださいね！　ではいいよるを！
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{整数}
+
+    正整数$n$に対して、$3^{3^n}+1$は最低でも　$2n+1$個の約数を持つことを示せ。
+
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+    題の命題を$P(n)$とおく。この時、$P(1)$が真であることは自明であるので、帰納的に$P(n)$が真ならば$P(n+1)$が真であることを示せば良い。
+    $$3^{3^{n+1}}+1=(3^{3^n}+1)(3^{2\cdot 3^n}-3^{3^n}+1)=(3^{3^n}+1)(3^{3^n}+1+3^{\frac{3^n+1}{2}})(3^{3^n}+1-3^{\frac{3^n+1}{2}})$$
+    により、帰納的に示される。
+
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+ただの因数分解の問題です。解答をみると大したことがないと思われますが、実際に手を動かして求めるのはそれなりに困難なので、できなかった方は復習をしましょう！\\
+近日中に収容所模試が公開されますので、参加してみてはいかがですか？
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{整数}
+
+    正整数$m,n(m<n)$に対して、
+    $$\frac{gcd(m,n)}{n}\cdot _n\text{C}_m$$
+    は整数であることを示せ
+    
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+    $\lambda m + \mu n =gcd(m,n)$となる$\lambda , \mu$が存在する。ここで、
+    $$ _{n}\text{C}_{m}=\frac{n}{m} \cdot_{n-1}\text{C}_{m-1},\frac{n}{n}\ _{n}\text{C}_{m}$$
+    が整数であると言うことに注意すれば、
+    $$\displaystyle\lambda \frac{m}{n}\cdot_{n}\text{C}_{m} + \mu\frac{n}{n} \cdot_{n}\text{C}_{m} =\frac{gcd(m,n)}{n}\cdot _n\text{C}_m$$
+    と考えている式が整数であることがわかる。
+
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+特定の大学でよく出される二項係数の問題です。式変形を自由自在にできるようになりましょう！
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{整数}
+
+    正整数$m$を用いて$p=4m+1$と表せる素数$p$が存在する。$n>2$とする。
+    $$\frac{1}{x}+\frac{1}{y}=\frac{1}{n}$$
+    を満たす正整数の組が$p^2$組あるとき、$n$は平方数であることを示せ。
+    
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+    式を変形することによって、
+    $$(x-n)(y-n)=n^2$$
+    が導き出されるが、当然$x,y$は$n$より大きいので、解の組は$n^2$の約数の数による。\\
+    場合１\\
+    $n$の素因数が１つのみの場合、その数のべきを$q_1$として、次の式が成り立つ。
+    $$2q_1+1=(4m+1)^2$$
+    ゆえに、$q_1=2(8m^2+4m)$となり、題の成立は確認できる。\\
+    場合２\\
+    $n$の素因数が２つのみの場合、その数のべきを$q_1,q_2$として、次の式が成り立つ。
+    $$2q_1+1=4m+1,2q_2+1=4m+1$$
+    ゆえに、$q_1=q_2=2m$となり、題の成立は確認できる。\\
+    それ以外\\
+    あり得ないことがすぐにわかる。\\
+    以上によって示された。
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+    試験期間の音が徐々に聞こえてきました。怖いです。
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{整数}
+
+    $x,y,z$を実数とし、$A,B,C$を$A+B+C$が$\pi$の整数倍となる実数とするとき、次の数列$\{a_n\}$
+    $$a_n=x^n\sin nA+y^n\sin nB+z^n\sin nC$$
+    が、$a_1=a_2=0$ならば、任意の正整数の$n$に対して、$a_n=0$となることを示せ。
+    
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+    $b_n=x^ne^{inA}+y^ne^{inB}+z^ne^{inC}$を設定すれば次の漸化式が得られることを確認できる。（この式を思いつくためには、たくさんの計算が必要です。根気よくできるようにしましょう）
+    $$b_{n+1}=A_1b_n-\{xye^{i(A+B)}+yze^{i(B+C)}+zxe^{i(C+A)}\}b_{n-1}+xyze^{i(A+B+C)}b_{n-2}$$
+    $$xye^{i(A+B)}+yze^{i(B+C)}+zxe^{i(C+A)}=b_2-b_1^2$$
+    ここで$b_0$が実数であることを示せば、帰納的に題が示される。これは明らかである。
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+    収容所模試にてかなりたくさんの回答が寄せられました。ご参加ありがとうございました。まだ未返却分は急いで採点しておりますので、お待ちください！
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{幾何}
+
+    円に内接する８角形があり、４つの辺の長さが２であり、残りは全て３である。この時、この８角形の面積を求めよ。
+    
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+    角Aが直角でAB=AC=AD=r,BC=2,CD=3となる四角形の面積の４倍と考えれば良い。ここで角Cは$3\pi/4$なので、余弦定理により、$2r^2=13+6\sqrt{2}$となる。求めたい面積は$4(\frac{r^2}{2}+\frac{1}{2}\cdot 2 \cdot 3 \sin \frac{3\pi}{4})$なので、計算すれば$13+12\sqrt{2}$とわかる。
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+    簡単な問題ですね！　週末に遅れさせた採点を、寝て起きた自分に託します！
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{幾何}
+
+    次の等式を示せ。
+    $$\sin 70 ^{\circ}\cos 80 ^{\circ}-\sin 175 ^{\circ}\cos 185 ^{\circ}=\frac{1}{4}$$
+    
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+和積の公式を用いて
+\begin{align*}
+    \sin 70 ^{\circ}\cos 80 ^{\circ}-\sin 175 ^{\circ}\cos 185 ^{\circ} &= \displaystyle\frac{1}{2}(\sin 150^{\circ}-\sin 10^{\circ})-\displaystyle\frac{1}{2}(\sin 360^{\circ}-\sin 10^{\circ})\\
+    &= \displaystyle\frac{1}{4}
+\end{align*}
+で示された．
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+    和積の公式ってなぜかとっつきにくいイメージがありますよね．その場で作れるように練習しておきましょう！
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{幾何}
+
+    平面が有限の本数の直線によって分けられており、どの３直線も一点では交わっていない。この時出来上がったすべての面を、青と赤で塗りつぶす。このとき、すべての直線で隣り合う面が違う色になるような塗り方があることを示せ。
+    
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+    機能的に示せばすぐに終わる。やり方としては、平面が$n$本の直線によって分けられている時の色分けの仕方Aと色を反転させた色分けの仕方をBとする。Aの状況で平面に直線を加える。その直線から見た片方をAのままにのこし、反対側をBの状態にすれば、$n+1$本の直線の際も示される。
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+    あまり受験勉強では見ないけど、受験本番では見かけるような問題だと思います！　こういう問題はしっかり自分で手を動かして実験してみることが解決につながることが多いです！
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{幾何}
+
+    各辺の長さが$1,2,\sqrt{3}$の三角形の各辺上に１点ずつ頂点を持つ正三角形の面積の最小値を求めよ。
+    
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+    $AB=1,BC=\sqrt{3},CA=2$として，$AB,BC,CA$それぞれの辺上に正三角形の頂点$R,P,Q$を設ける．また，角$ARQ=\theta,PQ=l$とする．三角形$ABC$の面積を三角形$ARQ,RBP,PCQ,PQR$の合計で計算することによって
+    $$l^2=\frac{6}{7\sin(2\theta - \alpha)+7},\tan \alpha = \frac{1}{4\sqrt{3}}$$
+    と得られる．（かなりの計算量があるので，練習と思ってやってほしい）故に求める最小値は$\sin(2\theta - \alpha)=1$のときで，$3\sqrt{3}/28$が答えとなる．
+
+
+
+\newpage
+
+
+\begin{itembox}[l]{幾何}
+
+    三角形ABCにおいて、角A$=\pi/3$,角B$=\pi/9$,AB$=1$の時、$\frac{1}{AC}-BC$を求めよ。
+    
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+    直線AC上に，角AEBが$\pi/3$となるようなEをとる．この時三角形ABEは正三角形となる．次に線分CE上に角CBFが$\pi/9$となるようなFをとる．対称性よりBC=BF,AC =EFとわかる．CF=AC$\cdot$BCとAE=AC+CF+EF=2AC+AC$\cdot$BC=1によって，求める値は2であるとわかる．
+
+
+\end{document}

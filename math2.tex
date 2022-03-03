@@ -1,0 +1,181 @@
+\documentclass[a4paper,fleqn,dvipdfmx]{jsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{otf}
+\setlength{\mathindent}{2zw}
+\usepackage{empheq}
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{41\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.5in}
+\setlength{\headsep}{0.3in}
+\setlength{\topmargin}{0.3in}
+\setcounter{page}{1}
+\usepackage{color}
+\usepackage{ascmac}
+\usepackage{amssymb, amsmath}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{数学100問} 
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{-\thepage-}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+
+\begin{itembox}[l]{一次関数}
+    $x=y(0\leq x\leq 1,0\leq y\leq 1)$を満たす全ての実数$x,y$が次の不等式を満たすような$(a,b)$の範囲を図示せよ。
+    \[y+b\leq (x+a)^2\]
+\end{itembox}
+    \begin{flushleft}
+    【解答】
+    \end{flushleft}
+    $X=x+a,Y=y+b$と置くことによって、"$x=y(0\leq x\leq 1,0\leq y\leq 1)$を満たす全ての実数$x,y$が$y+b\leq (x+a)^2$を満たす"という条件を、"$X-a=Y-b(a\leq X\leq a+1,b\leq y\leq b+1)$を満たす全ての実数$X,Y$が$Y\leq X^2$を満たす"と書き換えることができる。\\
+    ここで、"$X-a=Y-b(a\leq X\leq a+1,b\leq y\leq b+1)$を満たす全ての実数"は、"$(X,Y)$平面において、2点$(a,b),(a+1,b+1)$を結ぶ線分"のことである。\\
+    つまり、上記の条件は、"$(X,Y)$平面において、2点$(a,b),(a+1,b+1)$を結ぶ線分が、領域$Y\leq X^2$内にある""という条件と同値となる。\\
+    つまり求める領域とは、放物線$b\leq a^2$上の任意の点からベクトル$(-1,-1)$だけ移動した点を結ぶ線分より、下側の全領域の共通部分となる。ここでいう下側は、$a$軸で見た幅$1$のものを指す。それを図示すると次のようになる。\\
+\begin{tikzpicture}
+    \fill [gray, domain=-4:-1/2, variable=\x]
+    (-4, -2)
+    -- (-4,4)
+    -- ({-1-sqrt(5)},4)
+    -- plot [domain=-1-sqrt(5):-1/2] ({\x}, {\x*\x+2*\x})
+    -- (-1/2, -2)
+    -- cycle;
+    \fill [gray]
+    (-1/2, -2)
+    -- (-1/2,-3/4)
+    -- (1/2,1/4)
+    -- (1/2,-2)
+    -- cycle;
+    \fill [gray, domain=-4:-1/2, variable=\x]
+    (1/2,-2)
+    -- (1/2,1/4)
+    -- plot [domain=1/2:2] ({\x}, {\x*\x})
+    -- (4,4)
+    -- (4,-2)
+    -- cycle;
+    \draw[->,>=stealth,semithick] (-4,0)--(4,0)node[above]{$a$}; %x軸
+    \draw[->,>=stealth,semithick] (0,-2)--(0,4)node[right]{$b$}; %y軸
+    \draw (0,0)node[below right]{O}; %原点
+    \draw (-2,0)node[above]{$-2$}; %点(-1,0)
+    \draw[very thick,domain=-2:2] plot(\x,{pow(\x,2)})node[right]{$b=a^2$};
+    \draw[very thick,domain=-1-sqrt(5):sqrt(5)-1] plot(\x,{pow(\x,2)+2*\x})node[right] at (-3,3) {$b=a^2+2a$};
+    \draw[very thick,domain=-1/2:1/2] plot(\x,\x-1/4)node[right] at (1,-1/4) {$b=a-1/4$};
+    \coordinate (A1) at (0,0);
+    \coordinate (A2) at (-1,-1);
+    \draw [->] (A1)--(A2);
+    \coordinate (B1) at (-1,1);
+    \coordinate (B2) at (-2,0);
+    \draw [->] (B1)--(B2);
+    \coordinate (C1) at (-2,4);
+    \coordinate (C2) at (-3,3);
+    \draw [->] (C1)--(C2);
+\end{tikzpicture}
+
+\newpage
+\begin{itembox}[l]{通過領域}
+    $0\leq t \leq \displaystyle\frac{2}{3}\sqrt{3}$を満たす実数$t$に対して、$xy$平面上の点A,Bを
+    \[A \left( \frac{2}{3}t,-\frac{8}{3}t \right),B(t+1,t^3+3t^2-4t-4)\]
+    と定める。$t$が$0\leq t \leq \displaystyle\frac{2}{3}\sqrt{3}$を動くとき、直線ABの通る範囲を図示せよ。
+\end{itembox}
+\begin{multicols}{2}
+    \begin{flushleft}
+    【解答】
+    \end{flushleft}
+    直線ABの方程式は$y=(3t^2-4)x-2t^3$と計算することができる。過程は略す。\\
+    この時、$x$の係数の$t$における原始関数は$t^3-4t+C$という形なので、直線ABの方程式の両辺から$t^3-4t+C$を引いて、綺麗に因数分解できる$C$を探すと、$C=0$が見つかる。そうすることによって、直線ABの方程式は$y-t^3+4t=(3t^2-4)(x-t)$となる。\\
+    なぜこのように式変形をしたかというと、これはまさに$y=x^3-4x$上の点$(t,t^3-4t)$における接線$l$の方程式に他ならないからである。\\
+    つまり求める範囲とは、\\$l$の$t$が$0\leq t \leq \displaystyle\frac{2}{3}\sqrt{3}$を動くときに通過する範囲となる。これを図示すると次のようになる。\\
+    \columnbreak
+    \begin{tikzpicture}
+        \fill [gray, domain=-4:-1/2, variable=\x]
+        ({(4*sqrt(3))/9},{-(16*sqrt(3))/9} )
+        -- (1,-4)
+        -- (4,-4)
+        -- (4,{-(16*sqrt(3))/9})
+        -- ({(2*sqrt(3))/3},{-(16*sqrt(3))/9} )
+        -- plot [domain={(2*sqrt(3))/3}:0] (\x, {pow(\x,3)-4*\x})
+        -- (-1,4)
+        -- (-4,4)
+        -- (-4,{-(16*sqrt(3))/9})
+        -- cycle;
+        \draw[->,>=stealth,semithick] (-4,0)--(4,0)node[above]{$x$}; %x軸
+        \draw[->,>=stealth,semithick] (0,-4)--(0,4)node[right]{$y$}; %y軸
+        \draw (0,0)node[below right]{O}; %原点
+        \draw (-2,0)node[below]{$-2$}; %点(-1,0)
+        \draw (2,0)node[below]{$2$}; %点(-1,0)
+        \draw ({(2*sqrt(3))/3},0)node[below]{$\frac{2}{3}\sqrt{3}$};
+        \draw[dashed] ({(2*sqrt(3))/3},0) -- ({(2*sqrt(3))/3},{-(16*sqrt(3))/9});
+        \clip (-4,-4) rectangle (4,4); %四角形の中にグラフを入れる
+        \draw[very thick,domain=-4:4] plot[samples=100](\x,{pow(\x,3)-4*\x})node[right]at(2,-1){$y=x^3-4x$};
+        \draw[very thick](1,-4)--(-1,4)node[right] at (-1/2,2){$y=-4x$};
+        \draw[very thick](4,{-(16*sqrt(3))/9})--(-4,{-(16*sqrt(3))/9})node[below] at (-2,{-(16*sqrt(3))/9}){$y=-\frac{16}{9}\sqrt{3}$};
+    \end{tikzpicture}
+\end{multicols}
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+この問題を$t$の３次関数の解の配置で解いた人が多いかと思います。ですが、かなりの量の計算と場合分けが必要だったと思います。「そちらの方が一般的で、いろんな問題を解くことができる！　この問題は解答ありきじゃないか！」そのような問題が提起されることと思いますが、色々な大学でこのような問題が出されます。こういう問題が出たら儲けもんだという感覚でやっていけばいいかと思われます。\\
+余力がある読者の方へ。この問題の解き方は一般化することができます。一次線形微分方程式の知識が必要ですので、それを含めて概要を書いておきます。\\
+直線の形は$y=\frac{df}{dt}x+g(t)$であり、これが次の方程式に書き換えられれば証明が終わる。$y-f(x)=\frac{df}{dx}(x-t)$これらの方程式の定数項の比較によって次のような微分方程式が得られる。$f-t\frac{df}{dt}=g$これをもっと一般的な$y'+yp(x)=q(x)$という一次線形微分方程式を解くことによって解が得られることを示す。これは、両辺に$\mu(x)$という関数をかけて$r\mu(x)y'+\mu(x)p(x)y=\mu(x)q(x)$という式の左辺を、$\frac{d}{dx}yr(x)=\mu(x)y'+\mu(x)p(x)y$という形で見てあげることによって、$r(x)=\mu(x),r'(x)=\mu(x)p(x)$とみて、$\mu'(x)=\mu(x)p(x)$という微分方程式で$\mu$の確定をさせることができる。この微分方程式は$\frac{\mu'(x)}{\mu(x)}=\frac{d}{dx}ln|\mu(x)|$によって、$\mu(x)=Ce^{\int p(x)dx}$と帰着させられる。あとは元々の微分方程式$\frac{d}{dx}\mu(x)y=\mu(x)q(x)$を解くだけになるが、これは両辺を積分してあげるだけで
+$$y=\displaystyle\frac{1}{\mu(x)}\left[ \int \mu(x) q(x) dx + C\right]$$
+と解くことができるわけで、$p(x),q(x)$が多項式に過ぎないことと合わせれば、最初の問題は解決される。
+
+
+
+\newpage
+
+\begin{itembox}[l]{不等式}
+    \begin{itemize}
+        \item [1] 次の不等式を証明せよ
+            \begin{itemize}
+                \item [(1)] $$\frac{|a|}{1+|a|}+\frac{|b|}{1+|b|} \geq \frac{|a+b|}{1+|a+b|}$$
+                \item [(2)] $$\frac{\sqrt{x}+\sqrt{y}}{\sqrt{2x+\frac{4}{3}y}}\leq \frac{\sqrt{5}}{2}$$
+            \end{itemize}
+        \item [2] \# 実数$x,y,z$が次の式を満たす。$2x^2+3y^2+4z^2=1$この時、次の式の最大値を求めよ。$$5x-6y+7z$$
+    \end{itemize}
+\end{itembox}
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+\begin{itemize}
+    \item [1] 
+        \begin{itemize}
+            \item [(1)] $$\frac{|a|}{1+|a|}+\frac{|b|}{1+|b|} \geq \frac{|a|+|b|}{1+|a|+|b|}\geq \frac{|a+b|}{1+|a+b|}$$を示せば証明が完了する。両辺の分母を払って、共通項を消せば次の不等式に帰着する。
+            $$|a|+|b|\geq |a+b|$$
+            これは明らかである
+            \item [(2)] 
+            コーシーシュワルツの不等式により、
+            $$\left\{\left(\frac{1}{2}\right)^2+\left(\frac{\sqrt{3}}{2}\right)^2\right\}
+            \left\{(\sqrt{2}x)^2+\left(\frac{2}{\sqrt{3}}y\right)^2\right\}\geq
+            \left\{\left(\frac{1}{2}\right)(\sqrt{2}x)+\left(\frac{\sqrt{3}}{2}\right)\left(\frac{2}{\sqrt{3}}y\right)\right\}^2$$
+            この式の両辺の平方根を取り、さらに式変形すれば、求める不等式となる。
+        \end{itemize}
+    \item [2]
+    コーシーシュワルツの不等式により、
+    $$\left\{\left(\sqrt{2}x\right)^2+\left(\sqrt{3}y\right)^2+(2z)^2\right\}
+    \left\{\left(\frac{5}{\sqrt{2}}\right)^2+\left(\frac{-6}{\sqrt{3}}\right)^2+\left(\frac{7}{2}\right)^2\right\}\geq
+    (5x-6y+7z)^2$$
+    となるが、両辺の平方根をとると、左辺は$\frac{7}{2}\sqrt{3}$となり、これが求める最大値とわかる。
+\end{itemize}
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+今回の問題は不等式という範囲からの出題だったこともあり、多種多様な回答が寄せられました。心から感謝申し上げます！　非常にオーソドックスな解法で解いてくれた方と、関数の解析を積分でやる方の答案を参照例として添付させていただきます！\\
+これから出題する問題に関して全て言えることですが、おそらく、どの参考書にも載っているような問題を出すことは少ないかと思います。なぜならば、勤勉な受験生諸君にとって、似たような問題の過剰な反復をしたとしても、学習効率が上げられないかと思ったからです。\\
+応用力のある解法を中心に学んでいくのが皆さんの勉強でよくされることでしょうが、学問の真髄は案外、横道に逸れた先にあるものかもしれません！　これからも、問題を解いてくれる受験生の皆様にとって、思考力の鍛錬につながるような問題と、新たな発見に満ちた解答を作り上げることに全力を出していきます！
+
+
+\end{document}

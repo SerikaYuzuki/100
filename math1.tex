@@ -1,0 +1,302 @@
+\documentclass[a4paper,fleqn,dvipdfmx]{jsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{otf}
+\setlength{\mathindent}{2zw}
+\usepackage{empheq}
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{41\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.5in}
+\setlength{\headsep}{0.3in}
+\setlength{\topmargin}{0.3in}
+\setcounter{page}{1}
+\usepackage{color}
+\usepackage{ascmac}
+\usepackage{amssymb, amsmath}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{数学100問(添削はDiscordサーバーにて)} 
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{-\thepage-}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+
+
+\newpage
+\begin{itembox}[l]{整式}
+    \begin{itemize}
+        \item [1]
+        次の式を因数分解しなさい。
+        $$(a+b)(b+c)(c+a)+abc$$
+        $$(a+1)(b+1)(ab+1)+ab$$
+        $$a^4+b^4+c^4-2a^2b^2-2b^2c^2-2c^2a^2$$
+        $$a^3+b^3+c^3+a^2(b+c)+b^2(c+a)+c^2(a+b)$$
+        $$a^3(b-c)+b^3(c-a)+c^3(a-b)$$
+        \item [2]
+        次の式の成立を確認せよ。
+        $$(a_1^2+a_2^2+a_3^2)(b_1^2+b_2^2+b_3^2)-(a_1b_1+a_2b_2+a_3b_3)^2$$
+        $$=(a_2b_3-a_3b_2)^2+(a_3b_1-a_1b_3)^2+(a_1b_2-a_2b_1)^2$$
+        \item [3] 
+        $\overrightarrow{a}=(a_1,a_2,a_3),\overrightarrow{b}=(b_1,b_2,b_3),\overrightarrow{c}=(a_2b_3-a_3b_2,a_3b_1-a_1b_3,a_1b_2-a_2b_1)$とする。また、$\overrightarrow{a}$と$\overrightarrow{b}$のなす角度を$\theta$とする。この時、次のことを示せ。
+        $$|\overrightarrow{c}|=|\overrightarrow{a}||\overrightarrow{b}|\sin\theta$$
+        \item [4]
+        $abc\neq 0$とする。$(a^2+b^2+c^2)(x^2+y^2+z^2)=(ax+by+cz)^2$のとき、$$\frac{x}{a}=\frac{y}{b}=\frac{z}{c}$$
+        であることを示せ。
+    \end{itemize}
+\end{itembox}
+
+\begin{flushleft}
+【解答】\dotfill
+\end{flushleft}
+
+\begin{itemize}
+    \item [1]
+    \item [2]計算して確認してください。
+    \item [3]2番の式によって直ぐにわかる。
+    \item [4]2番の式によって直ぐにわかる。
+\end{itemize}
+\dotfill
+
+\newpage
+\begin{itembox}[l]{整式}
+\begin{itemize}
+    \item [(1)] 
+    任意の整式$F(x)$に対して$f(x),g(x),h(x)$が存在して，    $$F(x)=f(x^3)+xg(x^3)+x^2h(x^3)$$    となることを証明せよ．
+    \item[(2)]
+    整式$f(x)$を$(x-1)^2$で割った際のあまりは$8x-2$であり，$(x-2)^2$で割った際のあまりは$3x+11$である．この時，$f(x)$を$(x-1)^2(x-2)$で割った際のあまりを求めよ
+    \item[(3)]
+    曲線$y=x^4+ax^3+bx^2$が異なる2点で接する直線が存在する条件とその直線の方程式を求めよ．
+\end{itemize}
+\end{itembox}
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+\begin{itemize}
+    \item [(1)] $F(x)$は整式なので，有限の$n$を使って次のように表すことができる．
+    \begin{eqnarray}
+        F(x)&=&a_0+a_1x+a_2x^2+a_3x^3+...\\ &=&(a_0+a_3x^3+a_6x^6+...)+x(a_1+a_4x^3+a_7x^6+...)+x^2(a_2+a_5x^3+a_8x^6+...)
+    \end{eqnarray}
+    式変形後の３つの括弧の中身をそれぞれ$f(x^3),g(x^3),h(x^3)$とすれば，問題は解決となる．
+    \item [(2)] $$f(x)=(x-1)^2Q_1(x)+8x-2$$
+    $$f(x)=(x-2)^2Q_2(x)+3x+11$$
+    $$f(x)=(x-1)^2(x-2)Q(x)+ax^2+bx+c$$
+    とおくことができる．ここで$f(1),f(2)$をふた通りの計算で出した方程式と，$ax^2+bx+c$が$(x-1)^2$を割った結果が$8x-2$であることを合わせれば，$a=3,b=2,c=1$とわかる．
+    \item [(3)] 求める直線の方程式を$y=mx+n$とした時，$$x^4+ax^3+bx^2-mx-n=(x^2+Ax+B)^2$$となるような$A,B$が存在し，$x^2+Ax+B=0$が異なる２つの根を持つことが求める条件となる．これについては実際に計算し，係数比較してやれば
+    $$m=\frac{a(a^2-4b)}{8},n=-\left (\frac{a^2-4b}{8}\right )^2$$
+    $$A=\frac{a}{2},B=\frac{4b-a^2}{8}$$
+    判別式を考えれば，条件は
+    $$b\leq \frac{3a}{8}$$
+    となる．
+\end{itemize}
+
+
+
+\newpage
+\begin{itembox}[l]{整式}
+\begin{itemize}
+    \item [(1)] 次の方程式を解け．
+    $$x+y+z=1,x^2+y^2+z^2=x^3+y^3+z^3=29$$
+    \item [(2)] 4つの実数$a,b,c,d$が
+    $$a^2+b^2=1,c^2+d^2=1,ac+bd=0$$
+    を満たす時，次の関係が満たされることを証明せよ．
+    $$a^2+c^2=1,ab+cd=0$$
+    \item [(3)] $\sqrt{82}$の小数２桁程度の近似値を求めよ．ただし方法は問わない．
+\end{itemize}
+\end{itembox}
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+\begin{itemize}
+    \item [(1)] $xy+yz+zx=-14,$$$x^3+y^3+z^3=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)+3xyz$$という式から$xyz=24$ゆえに，$(x,y,z)$は$t^3+t^2-14t-24=(t+2)(t+3)(t-4)=0$の３つの解となる．
+    \item [(2)]  $$\overrightarrow{ x }= { a \choose b }  , \overrightarrow{ y }= { c \choose d }  $$
+なるベクトルを設定すると,$$ \left| \overrightarrow{ x } \right|=\left| \overrightarrow{ y } \right|=1,\hspace{5pt}   \overrightarrow{ x }\cdot \overrightarrow{ y }=0 \iff  \overrightarrow{ x }  \perp  \overrightarrow{ y } $$
+より,回転させると各成分は一致するので
+$${ -b \choose a }={ c \choose d } \Rightarrow a=d,b=-c$$
+よって,
+$$1=a^2+b^2=a^2+c^2,ac+bd=ac-ac=0$$
+    \item [(3)] この解答では一次近似を用いることとする．$$\sqrt{82}=\sqrt{81(1+\frac{1}{81})}=9(1+\frac{1}{81})^{1/2}\approx 9(1+\frac{1}{2}\frac{1}{81}) \approx 9.055$$
+    他に開平計算やユニークなものだと２進数で考えてみるのも良いと思われる．
+\end{itemize}
+
+
+
+\newpage
+\begin{itembox}[l]{式と計算}
+\begin{itemize}
+    \item [(1)] $x$が$\frac{x}{x-1}<-1$を満たすあらゆる実数値を取るとき、関数$\frac{1}{x},\frac{x^2-x-3}{x-2}$のそれぞれのとる値の範囲を求めよ。
+    \item [(2)] $$6x^3+ax^2-8x+b=(x-1)(cx+1)(3x+d)$$
+    上の式が恒等式であるとき、$a,b,c,d$の値を求めよ。(東京大)
+    \item [(3)] $x^2+sy+my^2-5x+2y+4=0$が２直線を表すとき、実数$m$の値を求めよ。
+\end{itemize}
+\end{itembox}
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+\begin{itemize}
+    \item [(1)] 与えられた条件は
+    $$\frac{x}{x-1}-(-1)=\frac{2x-1}{x-1}<0$$
+    $$(2x-1)(x-1)<0$$
+    $$\frac{1}{2}<x<1$$
+    となるので、
+    $$1<\frac{1}{x}<2$$
+    また、
+    $$\frac{x^2-x-3}{x-2}=x+1-\frac{1}{x-2}$$
+    ここで$x+1,-\frac{1}{x-2}$は$\frac{1}{2}<x<1$の範囲内で共に狭義短調増加であるので、求める範囲は$(\frac{13}{6},3)$となる。
+    \item [(2)] 式の右辺を実際に計算し、係数比較すれば良い。本当に？　本当に。何も難しくはない。\\$(a,b,c,d)=(7,-5,2,5)$
+    \item [(3)] 解の公式を使えば次のことがわかる。$$x=\frac{5-y\pm \sqrt{(1-4m)y^2-18y+9}}{2}$$
+    この時$(1-4m)y^2-18y+9$がある$y$の一次式の平方でなければならないのだが、その必要十分条件は$(1-4m)y^2-18y+9=0$が重根を持つことである。ゆえに$m=-2$である。
+    
+\end{itemize}
+
+
+
+\newpage
+
+\begin{itembox}[l]{三角比}
+平面上にABを斜辺とした直角三角形ABCが存在する。この時、辺ABから見てCとは逆側に、正三角形OABを作る。AB,BC,CAの長さが全て有理数だった時、OCの長さは有理数とならないことを示せ。ただし$\sqrt{2},\sqrt{3}$を無理数として扱ってよい。
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+今回の回答は少しばかり遠回りをすることにする。まず補題として、与えられた図に、辺ACから見て点Bとは逆側に三角形APCが正三角形になるように点Pを定める。このときAO=BPを示す。\\
+三角形OABと三角形APCの外接円の点 Cとは異なる交点を点Mとする。このとき、角AMC=角BMC=$\pi/3$となるので、角AMB=$\pi/3$となり、角BMO=$\pi/6$と合わせて、点Mは線分AO上にあることがわかる。同様にして点Mは線分BPE上にもある。ここで三角形PMCを反時計回りに$\pi/3$だけ回して、三角形AMPと合わさってできる正三角形をみれば、MC+AM=PMとわかる。同様にOM=MC+BMとなり、よって、AO＝AM＋MO＝AM＋BM＋CMとわかる。同様にしてBP＝AM＋BM＋CMより、AO=BPとなる。\\
+以上により、三角形ABEに加法定理を使わずに余弦定理を適応することができ、次の式を導くことができる。\\
+
+$$AO^2=BC^2+\sqrt{3}AB\cdot AC$$
+
+$\sqrt{3}$は有理数の加減乗除で表せない数なので、AO,BC,AB,ACどれか最低一つは無理数でなければならないが、問題の設定よりAOが無理数となる。
+
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+今回も色々な回答が寄せられて、まさに大繁盛という様子で嬉しい限りでございました！　心から感謝申し上げます！　非常にオーソドックスな解法で解いてくれた方の答案を参照例として添付させていただきます！\\
+あまり解いてくれる皆さんの実力がどのようなもので、どのような問題に強いのかがわからなくて、今回の問題のレベル設定に苦難しました。よろしければリプライか引用リツイートで今回の感想をいただけたら嬉しいです！\\
+問題自体はさほど難しいものではなかったみたいで、たくさんの正答が寄せられましたので、解答では初等幾何において役に立つことの多い手法と定理（補題はナポレオンの定理の亜種）を紹介させていただきました。\\
+またのご参加お待ちしてます！
+
+
+
+\newpage
+
+\begin{itembox}[l]{関数方程式}
+
+\begin{itemize}
+    \item [1] 
+        関数$f$は定義域と値域を正整数とし、次の式を満たす時、$f(n)$を決定せよ。
+        $$\{f(n)\}^2+2f\circ f(n)=n^2+4n+5$$
+        ただし、$f\circ f(n)=f(f(n))$ である。
+    
+    \item [2] \#
+    関数$f$は定義域と値域を実数とし、次の式を満たす時、$f(x)$を決定せよ。
+    $$f(x^2-y^2)=(x-y)\{f(x)+f(y)\}$$
+\end{itemize}
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+注意：解答はいとも簡単簡潔に書かれておりますが、辿り着くまでに気が遠くなるような試行を繰り返しています！
+\end{flushleft}
+
+\begin{itemize}
+    \item [1] 
+    $n=1$を代入することによって、$\{f(1)\}^2+2f\circ f(1)=10$とわかる。よって、$f(1)$は偶数であり、$2$しかとれないことがわかる。また、$f(1)=2$を代入してやれば、$f(2)=3$ともわかる。ここで$f(n)=n+1$となること予測できて、それを証明すれば良いとなる。その方法として数学的帰納法を用いることができる。$f(k)=k+1$として、与えられた方程式に$n=k$を代入すれば、直ちに$f(k+1)=k+2$とわかる。以上により証明は完了し、$$f(n)=n+1$$となる。
+    
+    \item [2]
+    $(x,y)=(0,0),(-1,0)$を代入すれば、
+    $$f(0)=0,f(1)=-f(-1)$$
+    がわかり、$(x,y)=(a,1),(a,-1)$を代入すれば、
+    $$f(a^2-1)=(a-1)\{f(a)+f(1)\}=(a+1)\{f(a)-f(1)\}$$
+    とわかる。この式を変形すれば、$f(a)=f(1)a$となることがわかる。ここで、$f(1)$の決定を考えてみるが、実際に$f(a)=f(1)a$を与えられた方程式に代入すれば、$f(1)$にかかわらず成立することがわかる。以上のことから、$f(x)=Cx(C$は任意の実数$)$とわかる。
+    
+\end{itemize}
+
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+何度も何度も問題文を書き換えてすみませんでした！　今後は二度とこのようなことがないように、問題の質の管理を行ってまいります！\\
+今回の問題ですが、関数方程式というあまり見慣れない問題設定でした。競技数学などではこのような問題が好まれる傾向があります。その理由としては、このような問題に対しては定石というような解法が存在せず、常に新しい問題に対処する気持ちで望まなければならないからだと思います。\\
+今回の問題に関しても、使っている方法は、代入と数学的帰納法のみであり、これらは私たちが普段から使い慣れているものだと思われます。では、なぜあまり解ける人がいないのでしょうか？（今回は正解者が一人もいませんでした…… 難易度を今後から気をつけます）　それは単に、受験参考書や塾講師などの指導が、受験生が解答の深淵を見えないようにして、わかりやすく表層的な解説をすることに傾倒し、結果、あらゆる数学的な問題解決法に通じるであろう、パターンを見つけることや、実際に値を入れて試してみることなどを疎かにしたからではないでしょうか？\\
+東大や東工大などの難関大学を除き、中堅大学の入試問題を見ればどこもかしこも、題材はどこかの誰かの焼き直しであり、ところによっては予備校に入試作成を依頼している大学まであります。そのような環境では、正解を探し求めるために間違え続けることが忌避されることになるのも仕方ないでしょう。\\
+ですが、深く物事を考え、自発的に学習をする受験生の方は、決してたくさーんのパターンの問題を覚えて、それを当てはめるだけの数学に満足していないと信じております。\\
+故に今回の問題は、死ぬほどトライアンドエラーを繰り返して、解法パターンなどというものが一歳当てにならないような問題にさせていただきました。\\
+これからみなさんが、あらゆる場面において、難解な問題に対処する際に、実際に間違え続けることによって正解を導き出せることを、お祈りしております。
+
+
+
+
+\newpage
+
+\begin{itembox}[l]{幾何、三角比}
+
+\begin{itemize}
+    \item [1] 
+    正十二面体から頂点を８個選んで立方体を作るとき、立方体と正十二面体の体積比はいくらになるか。
+    \item [2] 
+    三角形OABがあり、辺AB上に点Cが存在する。OA=$a$,OB=$b$,OC=$x$,角AOC=$\alpha$,角COB=$\beta$とした時、次の式の成立を示せ。
+    $$x=\frac{ab\sin(\alpha+\beta)}{a\sin\alpha + b\sin\beta}$$
+    \item [3] 
+    円に内接する四角形ABCDにおいて、次の式の成立を示せ。
+    $$AC\cdot BD=AB\cdot CD + BC\cdot DA$$
+\end{itemize}
+
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+\begin{itemize}
+    \item [1] 
+    有名な証明がいくつもあるので回答は略す。$\frac{5+\sqrt{5}}{4}$
+    
+    \item [2]
+    三角形OAC,三角形OCB,三角形OABの面積をそれぞれ$S_1,S_2,S$とした時、
+    $$S_1=ax\sin\alpha,S_2=bx\sin\beta,S=ab\sin(\alpha+\beta)$$
+    となる。これに$S=S_1+S_2$を代入すれば良い。
+    
+    \item [3]
+    有名な証明がいくつもあるので回答は略す。
+    
+\end{itemize}
+
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+今回で数学Iの範囲はおしまいです。次回からは数学Aの範囲に入ります。少し実生活が忙しいので、短くまとめさせていただきました。\\
+解いてくれた皆様、ありがとうございました！　次回からは少し骨がある問題が続くと思われますので、検討をお祈りしています！
+
+
+
+
+
+
+
+
+
+
+\end{document}

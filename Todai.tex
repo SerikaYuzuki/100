@@ -1,0 +1,94 @@
+\documentclass[a4paper,fleqn,dvipdfmx]{jsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{otf}
+\setlength{\mathindent}{2zw}
+\usepackage{empheq}
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{41\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.5in}
+\setlength{\headsep}{0.3in}
+\setlength{\topmargin}{0.3in}
+\setcounter{page}{1}
+\usepackage{color}
+\usepackage{ascmac}
+\usepackage{amssymb, amsmath}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{数学100問} 
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{-\thepage-}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+\begin{flushleft}
+【1】
+\end{flushleft}
+$1\leq m\leq n$となる正整数を考えたとき、$m$は次の値を割り切ることを示せ
+$$n\sum_{k=0}^{m-1}(-1)^k\binom{n}{k}
+$$
+ただし
+$$\binom{n}{k}=_n\mathrm{C}_k$$
+\begin{flushleft}
+【解答】
+\end{flushleft}
+\begin{eqnarray}
+n\sum_{k=0}^{m-1}(-1)^k\binom{n}{k}&=&n\sum_{k=0}^{m-1}(-1)^k\left(\binom{n-1}{k}+\binom{n-1}{k-1}\right)\\
+&=&n\sum_{k=0}^{m-1}(-1)^k\binom{n-1}{k}-n\sum_{k=0}^{m-2}(-1)^k\binom{n-1}{k-1}\\
+&=&n(-1)^{m-1}\binom{n-1}{m-1}=m(-1)^{m-1}\binom{n}{m}
+\end{eqnarray}
+
+\begin{flushleft}
+【2】
+\end{flushleft}
+パスカルの三角形の7番目の部分には、7、21、35という連続した二項係数があり、これが等差数列をなしている。3項の等差数列を含む行をすべて求めよ。
+\begin{flushleft}
+【解答】
+\end{flushleft}
+$$2\binom{n}{k}=\binom{n}{k-1}+\binom{n}{k+1}$$
+$$4k^2-4nk+n^2-n-2=0$$
+$$k=\frac{n\pm \sqrt{n+2}}{2}$$
+$$n+2=m^2$$
+$$k=\frac{(m+1)(m-2)}{2} or \frac{(m-1)(m=2)}{2}$$
+7以上の平方数-2となる数となる
+
+\begin{flushleft}
+【3】
+\end{flushleft}
+等差数列$\{a_n\}$と$S_n=\sum a_n$に対して、次の式が成立することをしめせ
+
+$$\sum_{k=0}^{n}\binom{n}{k}a_{k+1}=\frac{2^n}{n+1}S_{n+1}$$
+\begin{flushleft}
+【解答】
+\end{flushleft}
+$$(a_{k+1}+a_{n-k+1})(n+1)=2S_{n+1}$$
+$$\sum_{k=0}^n\binom{n}{k}(a_{k+1}+a_{n-k+1}(n+1)=2S_{n+1}=\frac{2S_{n+1}}{n+1}\sum_{k=0}^{n}\binom{n}{k}=\frac{2^n}{n+1}S_{n+1}$$
+
+\begin{flushleft}
+【4】
+\end{flushleft}
+$p$を素数として、$n,k$の$p$進数表示の第$i$桁目を$a_i,b_i$とする。また、$i>r$で$a_i$は全て$0$となる。この時次のことを示せ。
+$$\binom{n}{k}\equiv\prod_{i=0}^{r}\binom{a_i}{b_i}\ (\mathrm{mod}\ p)$$
+次に、パスカルの三角形で、全ての数が奇数となる行の行数$m$の必要十分条件は$m=2^n-1$となる正整数$n$が存在することであることを証明せよ。
+\begin{flushleft}
+【解答】
+\end{flushleft}
+$$n=a_rp^r+...+a_1p+a_0$$
+$$k=b_rp^r+...+b_1p+b_0$$
+$$n_1=a_rp^{r-1}+...+a_1$$
+$$k_1=b_rp^{r-1}+...+b_1$$
+$\binom{n}{k}$の最初の$b_0$項を考え、また、分母分子ともに$p$の倍数ではないことを考えて、
+$$(\frac{n_1p+a_0}{k_1p+b_0})(\frac{n_1p+a_0-1}{k_1p+b_0-1})...(\frac{n_1p+a_0-b_0+1}{k_1p+1})\equiv(\frac{a_0}{b_0})(\frac{a_0-1}{b_0-1})...(\frac{a_0-b_0+1}{1})=\binom{a_0}{b_0}\ (\mathrm{mod\ }p)$$
+となることがわかる。以上から、
+$$\binom{n}{k}\equiv\binom{a_0}{b_0}\binom{n_1}{k_1}\ (\mathrm{mod}\ p)$$
+このような作業を$r$回続ければ証明は完了する。\\
+次に、$p=2$の場合を考えれば、$\binom{n}{k}$全てが奇数となるのは、$a_i$が全て1の時のみなので、証明は完了する
+
+\end{document}
