@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.11.16)  3 MAR 2022 19:11
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.11.16)  5 MAR 2022 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -628,9 +628,9 @@ Missing character: There is no ^^b2 in font cmr10!
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 129.
+(amsmath)                 on input line 141.
 
-[3] [4] [5] [6] [7] [8] (latex_out/math1.aux) ) 
+[3] [4] [5] [6] [7] [8] [9] [10] (latex_out/math1.aux) ) 
 Here is how much of TeX's memory you used:
  17517 strings out of 479466
  339578 string characters out of 5870547
@@ -640,4 +640,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  113i,16n,116p,586b,1023s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/math1.dvi (8 pages, 32648 bytes).
+Output written on latex_out/math1.dvi (10 pages, 40188 bytes).
