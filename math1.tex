@@ -19,7 +19,7 @@
 \usepackage{tcolorbox}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{数学100問(添削はDiscordサーバーにて)} 
+\lhead{数学100問(添削はDM(簡易)、もしくはDiscordサーバーにて)} 
 \chead{}
 \rhead{}
 \lfoot{}
@@ -155,7 +155,7 @@ $$1=a^2+b^2=a^2+c^2,ac+bd=ac-ac=0$$
 \begin{itembox}[l]{式と計算}
 \begin{itemize}
     \item [(1)] $x$が$\frac{x}{x-1}<-1$を満たすあらゆる実数値を取るとき、関数$\frac{1}{x},\frac{x^2-x-3}{x-2}$のそれぞれのとる値の範囲を求めよ。
-    \item [(2)] $x^2+sy+my^2-5x+2y+4=0$が異なる２直線を表すとき、実数$m$の値を求めよ。
+    \item [(2)] $x^2+xy+my^2-5x+2y+4=0$が異なる２直線を表すとき、実数$m$の値を求めよ。
     \item [(3)] $y^3-2xy^2+x^2y+mx^3=0$が異なる２直線を表すとき、実数$m$の値を求めよ。
 \end{itemize}
 \end{itembox}
@@ -182,6 +182,12 @@ $$1=a^2+b^2=a^2+c^2,ac+bd=ac-ac=0$$
     
 \end{itemize}
 
+\begin{flushleft}
+    【解説】
+\end{flushleft}
+
+今回は特に(3)に苦戦している人が多数見受けられました。同次式についての定石に基けば難なく解決することができたでしょうが、そういうなんでもないところがまた難しいところだったりしますよね。
+
 
 
 \newpage
@@ -202,7 +208,7 @@ $$1=a^2+b^2=a^2+c^2,ac+bd=ac-ac=0$$
     \item [(1)] 与えられた式は
     $$g(x)=ax^2+3ax+b,h(x)=x^2+2x+4$$
     を用いて
-    $$f(x)=g(h(x)$$
+    $$f(x)=g(h(x))$$
     と表される。ここで、$h(x)=(x+1)^2+3\geq 3$なので、$f(x)$の最小値は$x\geq 3$における$g(x)$の最小値である。また
     $$g(x)=a\left(x+\frac{3}{2}\right)^2+b-\frac{9}{4}a$$
     なので、$a>0$の時にのみ最小値を持ち、$g(3)=18a+b$となり、これと$f(-2)=57$から、$a=2,b=1$とわかる。
@@ -212,6 +218,11 @@ $$1=a^2+b^2=a^2+c^2,ac+bd=ac-ac=0$$
     
 \end{itemize}
 
+\begin{flushleft}
+    【解説】
+\end{flushleft}
+
+今回は与えられた式と条件を解析しにいくという方法がありましたが、実はそれはかなりしんどい方法だったりしました。初等的な解法でそれなりに難しい問題も解決することができるということを知ってもらえれば嬉しいです。
 
 
 \newpage
@@ -236,6 +247,98 @@ $$1=a^2+b^2=a^2+c^2,ac+bd=ac-ac=0$$
     \item [(2)] $b=\sqrt{n}-a$を与えられた式に代入して整理することによって次の式が得られる。$$9a^2-3na+\sqrt{n}(3a^2-9a+n)=0$$ここで、$\sqrt{n}$が無理数であることを考えると、$3a^2-9a+n=0$でなければならず、ゆえに$9a^2-3na=0$となる。$a=0$の時$n=0$となってしまうため、不適となる。$n=3a$の時求めた式$3a^2-9a+n=0$に代入すれば、$a=2,n=6$とわかる。
     
 \end{itemize}
+
+\begin{flushleft}
+    【解説】
+\end{flushleft}
+
+2つの変数が入ったたった一つの方程式が解けるという少し不思議な問題でした。共感してもらえたら嬉しいです！
+
+
+
+\newpage
+
+\begin{itembox}[l]{三角比}
+    \begin{itemize}
+        \item [(1)] 原点Oを中心とする単位円周上の点Pを考える。点Pを通る傾き$-1$の直線が放物線$y=x^2+\frac{3}{4}$に接するとき、$x$軸の正の方向からOPへ正の向きに測った角度を$\theta$とした時、$\sin\theta+\cos\theta$を求めよ。
+        \item [(2)] 三角形ABCの辺BC上に点Dを定める。$x=\mathrm{AD},\alpha=\angle\mathrm{BAD},\beta=\angle\mathrm{CAD},a=\mathrm{AB},b=\mathrm{AC}$とした時、次の式の成立を示せ。
+        $$x=\frac{ab\sin{(\alpha+\beta)}}{a\sin{\alpha}+b\sin{\beta}}$$
+    \end{itemize}
+
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+\begin{itemize}
+    \item [(1)] 傾き$-1$の直線の方程式は$y=-x+(\sin \theta + \cos \theta)$で、これが放物線に接するので、$x^2+3/4=-x+(\sin \theta + \cos \theta)$が重解を持つことが求める条件であり、これは判別式によって$\sin \theta + \cos \theta=1/2$とわかる。
+    \item [(2)] 三角形ABCの面積は三角形ABDと三角形ACDの和になることを考えて、各々三角形に対して、２辺と挟角の正弦の積の半分が面積である公式を当てはめればすぐにわかる。
+    
+\end{itemize}
+
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+案外簡単に解くのが難しい、そんな基本問題を出させていただきました。次回からは加法定理なども含めた、三角関数の総合的な問題を出していきます。よろしくお願いします！
+
+
+
+\newpage
+
+\begin{itembox}[l]{三角比}
+\begin{itemize}
+    \item [(1)] 直角三角形ABCDで斜辺BC上にHを取り、AHとBCが垂直になるようにする。また、三角形ABH,AHCに内接する正方形をそれぞれ、HPQR,HXYZとした時、AQ=AYを示せ。
+    \item [(2)] 次の等式を示せ。$$4\sin\alpha\sin\beta\sin\gamma=\sin(-\alpha+\beta+\gamma)+\sin(\alpha-\beta+\gamma)+\sin(\alpha+\beta-\gamma)-\sin(\alpha+\beta+\gamma)$$
+    \item [(3)] $0\leq x \leq 2\pi$の時、次の不等式を満たす$x$の値の範囲を求めよ。
+    $$2\sin x \leq |\sqrt{1+\cos 2x}-\sqrt{1-\cos 2x}|$$
+\end{itemize}
+\end{itembox}
+
+
+\begin{flushleft}
+【解答】
+\end{flushleft}
+
+\begin{itemize}
+    \item [(1)] 三角形APQとYXAの相似により
+    $$\frac{AQ}{YA}=\frac{PQ}{XA}=\frac{AP}{YX}=\frac{AP+PQ}{YX+XA}=\frac{AP+PH}{HX+XA}=\frac{AH}{AH}=1$$
+    別の証明も紹介する。\\
+    $\angle$QAY,$\angle$QHY共に直角なので、四角形AQHYは円に内接している。また、AQとAYの円周角が等しいので、証明は完了する。
+    \item [(2)] $$\sin(\gamma+(\alpha-\beta))+\sin(\gamma-(\alpha-\beta))-\{\sin(\gamma+(\alpha+\beta))+\sin(\gamma-(\alpha+\beta))\}$$
+    $$=2\sin\gamma(\cos(\alpha - \beta)-\cos (\alpha + \beta))=4\sin\alpha\sin\beta\sin\gamma$$
+    \item [(3)] 両辺の式を整理すれば次の不等式に帰着する。
+    $$\sqrt{2}\sin x \leq ||\cos x|-|\sin x||$$
+    次の図を参照せよ。\\
+    \begin{tikzpicture}
+        \draw[->,>=stealth,semithick] (0,0)--(2*pi+0.5,0)node[above]{$x$}; %x軸
+        \draw[->,>=stealth,semithick] (0,-2)--(0,2)node[right]{$y$}; %y軸
+        \draw (0,0)node[left]{O}; %原点
+        \draw (0,0.5)node[left]{1/2}; %原点
+        \draw (pi/8,0)node[below]{$\pi/8$}; %点
+        \draw[dashed] (pi/8,0)--(pi/8,0.5); %pi/8
+        \draw (7*pi/8,0)node[below]{$7\pi/8$}; %点
+        \draw[dashed] (7*pi/8,0)--(7*pi/8,0.5); %7pi/8
+        \draw[dashed] (0,0.5)--(7*pi/8,0.5); %Yoko
+        \draw (2*pi,0)node[above]{$2\pi$}; %点
+        \draw[dashed] (2*pi,0)--(2*pi,1); %2pi
+        \draw[gray,very thick,samples=1000,domain=0:2*pi] plot(\x,{abs(abs(cos(\x r))-abs(sin (\x r)))})node[right]{$y=||\cos x|-|\sin x||$};
+        \draw[blue,very thick,samples=100,domain=0:2*pi] plot(\x,{sqrt(2)*sin(\x r)})node[below right]{$y=\sqrt{2}\sin x$};
+    \end{tikzpicture}
+    \newline
+    図により、求める範囲は
+    $0\leq x \leq \frac{\pi}{8},\frac{7\pi}{8}\leq x \leq 2\pi$
+\end{itemize}
+
+
+\begin{flushleft}
+【解説】
+\end{flushleft}
+
+グラフ作るのめんどくさかったぞおい！　頑張って作ったから、解いてくれよな！
 
 
 

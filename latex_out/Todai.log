@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.11.16)  9 MAR 2022 22:11
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.11.16)  9 MAR 2022 02:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/Users/matsumotokisei/Documents/100/math1.tex -halt-on-error
-(/Users/matsumotokisei/Documents/100/math1.tex
+**/Users/matsumotokisei/Documents/100/Todai.tex -halt-on-error
+(/Users/matsumotokisei/Documents/100/Todai.tex
 pLaTeX2e <2020-10-01>+2 (based on LaTeX2e <2020-10-01> patch level 4)
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/10/09 jsclasses (okumura, texjporg)
@@ -561,8 +561,8 @@ File: l3backend-dvipdfmx.def 2021-03-18 L3 backend support: dvipdfmx
 \g__pdf_backend_object_int=\count318
 \g__pdf_backend_annotation_int=\count319
 \g__pdf_backend_link_int=\count320
-) (latex_out/math1.aux)
-\openout1 = `math1.aux'.
+) (latex_out/Todai.aux)
+\openout1 = `Todai.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
@@ -584,60 +584,32 @@ LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 \Hy@linkcounter=\count321
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 38.
+(Font)              scaled to size 6.47278pt on input line 34.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 38.
+(Font)              scaled to size 4.62341pt on input line 34.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 38.
+(Font)              scaled to size 9.60999pt on input line 34.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 38.
+(Font)              scaled to size 6.72699pt on input line 34.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 38.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+(Font)              scaled to size 4.805pt on input line 34.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [1
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 64.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 64.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 64.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 64.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 64.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 64.
-
-Missing character: There is no ^^b2 in font cmr10!
-Missing character: There is no ^^b2 in font cmr10!
-Missing character: There is no ^^b2 in font cmr10!
-[1
-
-] [2]
-
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 141.
-
-[3] [4] [5] [6] [7] [8] [9] [10] [11] [12] (latex_out/math1.aux) ) 
+] [2] (latex_out/Todai.aux) ) 
 Here is how much of TeX's memory you used:
- 18816 strings out of 479466
- 366979 string characters out of 5870547
- 740388 words of memory out of 5000000
- 36235 multiletter control sequences out of 15000+600000
- 413729 words of font info for 75 fonts, out of 8000000 for 9000
+ 17514 strings out of 479466
+ 339537 string characters out of 5870547
+ 636533 words of memory out of 5000000
+ 34934 multiletter control sequences out of 15000+600000
+ 413394 words of font info for 74 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 113i,16n,116p,586b,1023s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,12n,116p,458b,1023s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/math1.dvi (12 pages, 87180 bytes).
+Output written on latex_out/Todai.dvi (2 pages, 7648 bytes).
